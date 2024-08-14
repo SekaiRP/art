@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sekai Art</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-contaner">
+        <img id="modalImg">
+
+        <div id="modalBtn">
+          <div id="downloadBtn" class="modal-btn">Download</div>
+          <div id="sendBtn" class="modal-btn">Send To PV</div>
+        </div>
+        <div id="closeBtn" class="modal-btn">Close</div>
+        <div id="modal-info"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <nav>
+    <div class="navbar">
+      <div class="container nav-container">
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <div class="logo">
+          <h1>Sekai Art</h1>
+        </div>
+        <div class="menu-items">
+          <li><a href="#">Sekai Art</a></li>
+          <li><a href="#">Dev Channel</a></li>
+          <li><a href="#">Repost Channel</a></li>
+          <li><a href="#">Main Channel</a></li>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="search-bar" id="searchBar">
+    <input type="text" id="search" placeholder="Search...">
+    <div id="searchBtn"><img src="images/search.svg"></div>
+  </div>
+  <div id="suggestions" class="autocomplete-suggestions"></div>
+  
+  <div id="getSearch">
+    <img src="images/get-search.png">
+    <div>برای شروع سرچ کن</div>
+  </div>
+  
+  <div id="notFound">
+    <img src="images/not-found.png">
+    <div>نتیجه ای یافت نشد ،با کلید واژه متفاوت سرچ کن</div>
+  </div>
+  
+  <div class="img-contener" id="mainContener">
+    <div class="img-row" id="row1">
+    </div>
+    <div class="img-row" id="row2">
+    </div>
+  </div>
+  
+  <div class="load-contener">
+    <div class="modal-btn" id="loadMore" onclick="loadMore()">Load More</div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
