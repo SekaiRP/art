@@ -56,14 +56,16 @@ const download = (src) => {
 const sendPv = (src) => {
   const link = document.createElement('a');
   link.href = `https://telegram.me/HealXObot?start=${src.replace(".","_")}`;
-  link.download = '';
   link.click();
-  document.getElementById("modal-info").innerText = "Download Started..."
+  document.getElementById("modal-info").innerText = "Send to Your Bot PV..."
 }
 
 const openModal = (image) => {
   document.getElementById("modalImg").src = `https://sekai-art.keyaru909.workers.dev/image/thumbnail/${image.thumbnail.replace(".240",".600")}`
   document.getElementById("downloadBtn").onclick = () => download(`https://sekai-art.keyaru909.workers.dev/image/full/${image.full}`)
+  
+  document.getElementById("sendBtn").onclick = () => sendPv(image.full)
+  
   document.getElementById("modal-info").innerText = ""
   modalElement.style.display = "block";
 }
