@@ -58,7 +58,7 @@ const download = (src) => {
 
 const sendPv = (src) => {
   const link = document.createElement('a');
-  link.href = `https://telegram.me/HealXObot?start=${src.replaceAll(".","_")}`;
+  link.href = `https://telegram.me/SekaiArtBot?start=${src.replaceAll(".","_")}`;
   console.log(src.replaceAll(".","_"))
   link.click();
   document.getElementById("modal-info").innerText = "Send to Your Bot PV..."
@@ -187,3 +187,4 @@ searchBox.addEventListener('blur', () => {
     searchBar.style.borderBottomRightRadius = "1em";
   }, 200);
 });
+namen
