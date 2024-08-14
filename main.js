@@ -1,12 +1,12 @@
 let currentSearch = "";
 let currentPage = 1;
 let init = "";
+const tg = window.Telegram.WebApp;
+
 
 document.addEventListener('DOMContentLoaded', function() {
   if (window.Telegram && window.Telegram.WebApp) {
-    const body = document.body
-    body.style.background = 'rgba(150, 48, 250, 0.05)';
-    body.style.color = '#000';
+    tg.setBackgroundColor('rgba(150, 48, 250, 0.05)');
   }
 });
 
@@ -45,11 +45,14 @@ const suggestFunc = async (q) => {
   }
 }
 
+function openTgLink(url){
+  tg.openTelegramLink(url)
+}
 
 const modalElement = document.getElementById('modal')
 
 const download = (src) => {
-  window.Telegram.WebApp.openLink(`http://sekai-art.000.pe/download.php/${src}`)
+  tg.openLink(`http://sekai-art.000.pe/download.php/${src}`)
   /*
   const link = document.createElement('a');
   link.href = `http://sekai-art.000.pe/download.php/${src}`;
