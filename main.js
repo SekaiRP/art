@@ -3,18 +3,6 @@ let currentPage = 1;
 let init = "";
 const tg = window.Telegram.WebApp;
 
-const setTheme = ()=>{
-  tg.setBackgroundColor('rgba(150, 48, 250, 0.05)');
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  if (window.Telegram && window.Telegram.WebApp) {
-    setTheme
-  }
-});
-
-tg.onEvent('themeChanged', setTheme);
-
 
 const loadMoreBtn = document.getElementById("loadMore")
 const notFound = document.getElementById("notFound")
