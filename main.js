@@ -2,6 +2,13 @@ let currentSearch = "";
 let currentPage = 1;
 let init = "";
 
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.Telegram && window.Telegram.WebApp) {
+    const body = document.body
+    body.style.background = 'rgba(150, 48, 250, 0.05)';
+    body.style.color = '#000';
+  }
+});
 
 
 const loadMoreBtn = document.getElementById("loadMore")
