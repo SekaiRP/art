@@ -17,7 +17,7 @@ body {
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
-  z-index: 999;
+  z-index: 1;
 }
 
 .nav-container {
@@ -25,7 +25,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 62px;
-  z-index: 999;
+  z-index: 1;
 }
 
 .navbar .menu-items {
