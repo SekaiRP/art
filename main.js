@@ -15,7 +15,7 @@ const row2 = document.getElementById('row2');
 
 const searchFunc = async (s, p) => {
   try {
-    let q = s.trim().replace(" ","+")
+    let q = s.trim().replaceAll(" ","+")
     
     const res = await fetch(`https://sekai-art.keyaru909.workers.dev/search?s=${q}&p=${p}&i=${init}`)
     let data = await res.json()
@@ -55,7 +55,8 @@ const download = (src) => {
 
 const sendPv = (src) => {
   const link = document.createElement('a');
-  link.href = `https://telegram.me/HealXObot?start=${src.replace(".","_")}`;
+  link.href = `https://telegram.me/HealXObot?start=${src.replaceAll(".","_")}`;
+  console.log(src.replaceAll(".","_"))
   link.click();
   document.getElementById("modal-info").innerText = "Send to Your Bot PV..."
 }
