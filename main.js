@@ -187,4 +187,3 @@ searchBox.addEventListener('blur', () => {
     searchBar.style.borderBottomRightRadius = "1em";
   }, 200);
 });
-namen
